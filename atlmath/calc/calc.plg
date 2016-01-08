@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: calc - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/calc.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\lenovo\Desktop\atlmath\calc\calc.rc"" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/calc.pdb" /machine:I386 /out:"Release/calc.exe"  .\Release\calc.obj .\Release\calcDlg.obj .\Release\StdAfx.obj .\Release\calc.res "
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+calc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

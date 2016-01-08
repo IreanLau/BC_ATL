@@ -1,0 +1,42 @@
+// atlmath.idl : IDL source for atlmath.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (atlmath.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(E3DE4890-826D-4525-98CF-696AA558D526),
+	
+		helpstring("IMath Interface"),
+		pointer_default(unique)
+	]
+	interface IMath : IUnknown
+	{
+		[helpstring("method Add")] HRESULT Add([in]long op1,[in]long op2,[out,retval]long*pVal);
+		[helpstring("method Divide")] HRESULT Divide([in]long op1,[in]long op2,[out,retval]long*pVal);
+		[helpstring("method Multiply")] HRESULT Multiply([in]long op1,[in]long op2,[out,retval]long*pVal);
+		[helpstring("method Subtract")] HRESULT Subtract([in]long op1,[in]long op2,[out,retval]long*pVal);
+	};
+
+[
+	uuid(0C8BBBAC-87A0-45A0-9534-1EBEE4FF71C3),
+	version(1.0),
+	helpstring("atlmath 1.0 Type Library")
+]
+library ATLMATHLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(1038F30C-3BA9-44F1-8A31-A0A3B1CB3202),
+		helpstring("Math Class")
+	]
+	coclass Math
+	{
+		[default] interface IMath;
+	};
+};

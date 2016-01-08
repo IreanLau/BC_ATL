@@ -1,0 +1,25 @@
+HKCR
+{
+	Atlmath.Math.1 = s 'Math Class'
+	{
+		CLSID = s '{1038F30C-3BA9-44F1-8A31-A0A3B1CB3202}'
+	}
+	Atlmath.Math = s 'Math Class'
+	{
+		CLSID = s '{1038F30C-3BA9-44F1-8A31-A0A3B1CB3202}'
+		CurVer = s 'Atlmath.Math.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1038F30C-3BA9-44F1-8A31-A0A3B1CB3202} = s 'Math Class'
+		{
+			ProgID = s 'Atlmath.Math.1'
+			VersionIndependentProgID = s 'Atlmath.Math'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{0C8BBBAC-87A0-45A0-9534-1EBEE4FF71C3}'
+		}
+	}
+}
